@@ -1,0 +1,37 @@
+# Input names
+a = input("Enter boy name: ").lower().replace(" ", "")
+b = input("Enter girl name: ").lower().replace(" ", "")
+
+# Convert to list
+a1 = list(a)
+b1 = list(b)
+
+# Remove common characters
+for ch in a[:]:
+    if ch in b1:
+        a1.remove(ch)
+        b1.remove(ch)
+
+# Count remaining letters
+cnt = len(a1) + len(b1)
+
+# FLAMES logic
+res = list("FLAMES")
+index = 0
+
+while len(res) > 1:
+    index = (index + cnt - 1) % len(res)
+    res.pop(index)
+
+# Result mapping
+result_map = {
+    'F': "Friends",
+    'L': "Love",
+    'A': "Affection",
+    'M': "Marriage",
+    'E': "Enemies",
+    'S': "Siblings"
+}
+
+# Final output
+print("Relationship:", result_map[res[0]])
