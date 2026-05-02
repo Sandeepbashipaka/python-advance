@@ -1,0 +1,14 @@
+a = [[" " for i in range(11)] for i in range(11)]
+
+for i in range(11):
+    for j in range(11):
+        if j == 0:
+            a[i][j] = "*"
+        elif j == 11 - 1:
+            a[i][j] = "*"
+        elif i == j and i <= 11 // 2:
+            a[i][j] = "*"
+        elif i + j == 11 - 1 and i <= 11 // 2:
+            a[i][j] = "*"
+for row in a:
+    print(*row)
