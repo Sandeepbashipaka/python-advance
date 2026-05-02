@@ -1,0 +1,12 @@
+d={'name':'sandeep', 234:[1,2,3,4,5],'Runs':4000} 
+d["dept"]='AIM'
+# for i in d.keys():
+#     print(i)
+# print()
+# for i in d.values():
+#     print(i)
+# print()
+# for i in d.items():
+#     print(i)
+print(d)
+
