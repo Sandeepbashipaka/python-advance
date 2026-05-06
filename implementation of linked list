@@ -1,0 +1,44 @@
+ll = linked_list()
+
+while True:
+    print("\n1.Insert at Beginning")
+    print("2.Insert at End")
+    print("3.Insert after a value")
+    print("4.Search")
+    print("5.Display")
+    print("6.Exit")
+
+    a = int(input("Enter choice: "))
+
+    if a == 1:
+        b = int(input("Enter data: "))
+        ll.insert_at_beginning(b)
+
+    elif a == 2:
+        b = int(input("Enter data: "))
+        ll.insert_at_end(b)
+
+    elif a == 3:
+        target = int(input("Insert after which value: "))
+        data = int(input("Enter new data: "))
+        ll.insert_after_value(target, data)
+
+    elif a == 4:
+        b = int(input("Enter data to search: "))
+        if ll.search(b):
+            print("Element found")
+        else:
+            print("Element not found")
+
+    elif a == 5:
+        ll.display()
+
+    elif a == 6:
+        print("Exiting...")
+        break
+
+    else:
+        print("Invalid input")
+
+
+
